@@ -10,7 +10,7 @@ $queues = $client->queues_list();
 if (count($queues = $queues["result"]["queues"]) > 0) {
     $lastQueue = $client->queue($queues[0]['id']);
     if (!count($lastQueue->getTracks())) {
-        exit('Сейчас играет: . $lastQueue->getContext()->getDescription()');
+        exit('Сейчас играет: ' . $lastQueue->getContext()->getDescription());
     }
 
     $track = $client->tracks($lastQueue->getTracks()[$lastQueue->getCurrentIndex()]->getId())[0];
