@@ -3,7 +3,7 @@
 
 ## Простой пример
 
-```
+```php
 $client = new Client($token);
 $queues = $client->queues_list();
 
