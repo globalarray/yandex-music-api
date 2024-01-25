@@ -37,7 +37,7 @@ class YandexToken {
 
     public function isValid(string $token) : bool{
         $token = trim(preg_replace('/\s+/', ' ', $token));
-        return strlen($token) === 58;
+        return strlen($token) >= 58;
     }
 
     public function __toString() : string{
